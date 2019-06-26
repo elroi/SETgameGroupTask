@@ -80,7 +80,7 @@ class Card extends React.Component {
 
         var numShapes = [];
         for (let i = 0; i < this.props.cardNumber; i++) {
-            numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]}></div>);
+            numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}></div>);
         }
         return (
             <div className={"card " + clicked} onClick={this.selectCard} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}>
