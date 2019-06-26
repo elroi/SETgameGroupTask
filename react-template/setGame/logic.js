@@ -49,8 +49,13 @@ class Card extends React.Component {
         super(props);
     }
     render() {
+        var numShapes = [];
+        for (let i=0; i<this.props.cardNumber; i++) {
+            numShapes.push(<div className={this.props.cardColor+" "+this.props.cardTexture+" "+this.props.cardShape} key={numShapes[i]}>text</div>);
+        }
         return (
             <div className={"card " + this.props.cardColor}>
+                {numShapes}
             </div>
         )
     }
