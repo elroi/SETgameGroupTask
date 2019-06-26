@@ -1,0 +1,41 @@
+.nofill{
+    background-image: linear-gradient(0deg, white, white);
+    background-size: 14px 14px;
+}
+.filled{
+    background-image: transparent;
+}
+.striped{
+    background-image: linear-gradient(135deg, #ffffff 25%, transparent 25%, transparent 50%, #ffffff 50%, #ffffff 75%, transparent 75%, transparent 100%);
+    background-size: 14px 14px;
+}
+.red{
+    border-color: #ed5565;
+    background-color: rgba(237, 85, 101, .5);
+}
+.green{
+    border-color: #a0d468;
+        background-color:  rgba(160, 212, 104, 0.5);
+}
+.blue{
+    border-color: #4fc1e9;
+        border-color: rgb(79, 193, 233, 0.5);
+}
+
+.leaf{
+    border: 3px solid;
+    border-radius: 100px 0;
+}
+.rectangle{
+    border: 3px solid;
+    border-radius: 3px;
+}
+.pill{
+    border: 3px solid;
+    border-radius: 100px;
+}
+
+.pill, .rectangle, .leaf {
+    width: 25%;
+    height: 60%;
+}
