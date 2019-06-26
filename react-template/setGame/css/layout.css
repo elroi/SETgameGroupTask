@@ -41,7 +41,14 @@ body {
     flex-direction: row;
     width: 100%;
     align-items: center;
-    justify-content: flex-end
+    justify-content: space-between
+}
+
+.information{
+    display:flex;
+}
+.information > div{
+    padding:0px 5px
 }
 
 button {
