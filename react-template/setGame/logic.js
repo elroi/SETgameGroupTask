@@ -120,7 +120,7 @@ class Board extends React.Component {
     render() {
         debugger;
         var array = [
-            ["blue", "striped", "circle", 2],
+            ["blue", "filled", "pill", 2],
             ["green", "solid", "square", 3],            
             ["green", "solid", "square", 3],
             ["green", "solid", "square", 3],
