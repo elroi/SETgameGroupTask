@@ -16,6 +16,7 @@ class App extends React.Component {
                     </div>
                 </div>
                 <Board className="cardsWrapper" />
+                <div class="footer">/ Team 3 /</div>
             </div>
         )
     }
@@ -39,23 +40,23 @@ class Board extends React.Component {
                 selectedCards: cardArray
             })
         }
-        else if(this.state.selectedCards.length == 2) {
+        else if (this.state.selectedCards.length == 2) {
             var card1 = cardSelected.split("\ ")
             var cardArray = this.state.selectedCards
             cardArray.push(card1);
-            if(window.set.compareCards(cardArray)){
+            if (window.set.compareCards(cardArray)) {
                 console.log('match');
             }
-            else{
+            else {
                 console.log('not a match');
             }
             var empty = [];
             this.setState({
                 selectedCards: empty
             })
-           
+
         }
-        
+
 
     }
 
