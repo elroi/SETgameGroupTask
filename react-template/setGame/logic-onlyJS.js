@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-// //JS ONLY
-// var set = {};
-// set.numberOfCards = 12;
-// set.color = ["red", "blue", "green"];
-// set.pattern = ["full", "empty", "striped"];
-// set.shape = ["circle", "square", "triangle"];
-// set.number = ["one", "two", "three"];
-// set.cards = [];
-// set.chosenCards = [];
-=======
 //JS ONLY
 window.set = {};
 set.numberOfCards = 12;
@@ -18,7 +7,6 @@ set.shape = ["pill", "rectangle", "leave"];
 set.number = [1, 2, 3];
 set.cards = [];
 set.chosenCards = [];
->>>>>>> 5f3f30ba7f5f31bdbf77fdaef9cfca207bb5eaa6
 
 // //creating all posible combinations of cards
 // set.createCards = function () {
