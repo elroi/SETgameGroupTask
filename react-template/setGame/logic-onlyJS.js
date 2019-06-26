@@ -1,3 +1,4 @@
+//JS ONLY
 var set = {};
 set.numberOfCards = 12;
 set.color = ["red", "blue", "green"];
@@ -93,3 +94,8 @@ set.countMatchesInChosenCards = function() {
     }
     return set.numberOfMatchesInChosenCards;
 }
+
+//initializing the game
+set.createCards();
+set.chooseCards();
+set.countMatchesInChosenCards();
