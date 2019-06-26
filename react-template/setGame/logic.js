@@ -16,11 +16,20 @@ class App extends React.Component {
 class Board extends React.Component {
     constructor(props) {
         super(props);
-        this.validateChange = this.validateChange.bind(this)
+        this.validateChange = this.validateChange.bind(this);
+        this.state = {
+            selectedCards: []
+        }
     }
 
-    validateChange() {
-        console.log("validate works")
+    validateChange(cardSelected) {
+        debugger;
+        var card = cardSelected.split(" ")
+        var cardArray = this.state.selectedCards
+        cardArray.push(card)
+        this.setState({
+            selectedCards: cardArray
+        })
     }
 
     render() {
@@ -61,8 +70,8 @@ class Card extends React.Component {
         this.setState({
             isClicked: true
         })
-
-        this.props.handleChange(event.target)
+        this.props.handleChange(event.target.getAttribute('data-cardinfo'))
+    
     }
 
 
@@ -74,7 +83,7 @@ class Card extends React.Component {
             numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]}></div>);
         }
         return (
-            <div className={"card " + clicked} onClick={this.selectCard}>
+            <div className={"card " + clicked} onClick={this.selectCard} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}>
                 {numShapes}
             </div>
         )
