@@ -23,28 +23,31 @@ class Board extends React.Component {
     }
 
     validateChange(cardSelected) {
-        debugger;
         if (this.state.selectedCards.length < 2) {
-            debugger;
             var card1 = cardSelected.split("\ ")
             console.log(cardSelected);
             console.log(card1)
             var cardArray = this.state.selectedCards
             cardArray.push(card1);
+            console.log(cardArray);
             this.setState({
                 selectedCards: cardArray
             })
         }
         else if(this.state.selectedCards.length == 2) {
-            debugger;
             var card1 = cardSelected.split("\ ")
             var cardArray = this.state.selectedCards
             cardArray.push(card1);
             if(window.set.compareCards(cardArray)){
                 console.log('match');
+                alert("match found");
             }
             else{
                 console.log('not a match');
+                alert("not a match");
+                this.setState({
+                    clearSelected: true
+                })
             }
             var empty = [];
             this.setState({
@@ -83,8 +86,7 @@ class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isClicked: false,
-            isMatched: false
+            isClicked: false
         }
         this.selectCard = this.selectCard.bind(this)
     }
