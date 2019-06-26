@@ -42,6 +42,43 @@ set.getRandomCard = function () {
     return Math.floor(Math.random() * this.cards.length);
 }
 
+//comparing 3 selected cards
+set.compareCards = function (selectedCards) {
+    var result = 0;
+    var colors = [];
+    var patterns = [];
+    var shapes = [];
+    var numbers = [];
+    var allCharacteristics = [colors, patterns, shapes, numbers];
+
+    for (let m = 0; m < selectedCards.length; m++) {
+        for (let n = 0; n < allCharacteristics.length; n++) {
+            allCharacteristics[n][m] = selectedCards[m][n];
+        }
+    }
+
+    //after this point it is not fully generic, it's working only when there are 3 selected cards
+    //checking the equality of characteristics
+    for (let x = 0; x < allCharacteristics.length; x++) {
+        if (allCharacteristics[x][0] == allCharacteristics[x][1] && allCharacteristics[x][1] == allCharacteristics[x][2]) {
+            result++;
+        }
+    }
+
+    //checking if one characteristic is all different for cards
+    for (let x = 0; x < allCharacteristics.length; x++) {
+        if(allCharacteristics[x][0] != allCharacteristics[x][1] && allCharacteristics[x][0] != allCharacteristics[x][2] && allCharacteristics[x][1] != allCharacteristics[x][2]){
+            result++
+        }
+    }
+    if(result == 4) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 
 //REACT
 class App extends React.Component {
