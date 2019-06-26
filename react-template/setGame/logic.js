@@ -26,7 +26,9 @@ class Board extends React.Component {
         debugger;
         if (this.state.selectedCards.length < 2) {
             debugger;
-            var card1 = cardSelected.split(":")
+            var card1 = cardSelected.split("\ ")
+            console.log(cardSelected);
+            console.log(card1)
             var cardArray = this.state.selectedCards
             cardArray.push(card1);
             this.setState({
@@ -35,7 +37,7 @@ class Board extends React.Component {
         }
         else if(this.state.selectedCards.length == 2) {
             debugger;
-            var card1 = cardSelected.split(":")
+            var card1 = cardSelected.split("\ ")
             var cardArray = this.state.selectedCards
             cardArray.push(card1);
             if(window.set.compareCards(cardArray)){
@@ -101,10 +103,10 @@ class Card extends React.Component {
 
         var numShapes = [];
         for (let i = 0; i < this.props.cardNumber; i++) {
-            numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]} data-cardInfo={this.props.cardColor + ":" + this.props.cardTexture + ":" + this.props.cardShape + ":" + this.props.cardNumber}></div>);
+            numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}></div>);
         }
         return (
-            <div className={"card " + clicked} onClick={this.selectCard} data-cardInfo={this.props.cardColor + ":" + this.props.cardTexture + ":" + this.props.cardShape + ":" + this.props.cardNumber}>
+            <div className={"card " + clicked} onClick={this.selectCard} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}>
                 {numShapes}
             </div>
         )
