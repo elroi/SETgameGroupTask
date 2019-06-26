@@ -2,8 +2,8 @@
 window.set = {};
 set.numberOfCards = 12;
 set.color = ["red", "blue", "green"];
-set.pattern = ["nofill", "filled", "stripped"];
-set.shape = ["pill", "rectangle", "leave"];
+set.pattern = ["nofill", "filled", "striped"];
+set.shape = ["pill", "rectangle", "leaf"];
 set.number = [1, 2, 3];
 set.cards = [];
 set.chosenCards = [];
@@ -99,3 +99,20 @@ set.countMatchesInChosenCards = function() {
 set.createCards();
 set.chooseCards();
 set.countMatchesInChosenCards();
+/*
+window.set = {
+    cards: [
+        ["blue", "filled", "pill", 2],
+        ["green", "solid", "square", 3],            
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+        ["green", "solid", "square", 3],
+    ]
+};*/
