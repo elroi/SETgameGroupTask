@@ -99,20 +99,3 @@ set.countMatchesInChosenCards = function() {
 set.createCards();
 set.chooseCards();
 set.countMatchesInChosenCards();
-/*
-window.set = {
-    cards: [
-        ["blue", "filled", "pill", 2],
-        ["green", "solid", "square", 3],            
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-        ["green", "solid", "square", 3],
-    ]
-};*/
