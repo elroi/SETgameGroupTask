@@ -46,6 +46,7 @@ class Board extends React.Component {
             this.setState({
                 selectedCards: empty
             })
+            
            
         }
         
