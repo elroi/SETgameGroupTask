@@ -24,10 +24,11 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background-repeat: repeat;
+    justify-content: center;
+    background-image: url(../img/bkg_image0.20.jpg);
+    background-size: 250px;
     background-position: center;
-    background-size: 300px
+    background-repeat: repeat;
 }
 
 /* GENERAL */
@@ -89,10 +90,7 @@ button:hover {
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/bkg_image0.20.jpg);
-    background-size: 250px;
-    background-position: center;
-    background-repeat: repeat;
+
 }
 
 .card {
