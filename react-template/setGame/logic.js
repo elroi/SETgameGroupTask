@@ -6,12 +6,20 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <div className="header">
+                    <div className="information">
+                        <div><b>Available Sets: </b><span>00</span></div>
+                        <div><b>Matches: </b><span>00</span></div>
+                    </div>
+                    <div className="buttons">
+                        <button>Reset</button>
+                    </div>
+                </div>
                 <Board className="cardsWrapper" />
             </div>
         )
     }
 }
-
 
 class Board extends React.Component {
     constructor(props) {
@@ -71,7 +79,6 @@ class Card extends React.Component {
             isClicked: true
         })
         this.props.handleChange(event.target.getAttribute('data-cardinfo'))
-    
     }
 
 
