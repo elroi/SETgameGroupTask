@@ -16,25 +16,7 @@ class Board extends React.Component {
         super(props);
     }
     render() {
-        debugger;
-        var array = [
-            ["blue", "filled", "pill", 2],
-            ["green", "solid", "square", 3],            
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-            ["green", "solid", "square", 3],
-
-
-
-        ]
-
+        var array = set.cards;
         return (
             <div>
                 <div className="row">
@@ -50,7 +32,7 @@ class Board extends React.Component {
                     <Card cardColor={array[6][0]} cardTexture={array[6][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
                     <Card cardColor={array[7][0]} cardTexture={array[7][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
                 </div>
-                
+
                 <div className="row">
                     <Card cardColor={array[8][0]} cardTexture={array[8][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
                     <Card cardColor={array[9][0]} cardTexture={array[9][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
