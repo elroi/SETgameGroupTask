@@ -67,26 +67,26 @@ set.compareCards = function (selectedCards) {
 
     //checking if one characteristic is all different for cards
     for (let x = 0; x < allCharacteristics.length; x++) {
-        if(allCharacteristics[x][0] != allCharacteristics[x][1] && allCharacteristics[x][0] != allCharacteristics[x][2] && allCharacteristics[x][1] != allCharacteristics[x][2]){
+        if (allCharacteristics[x][0] != allCharacteristics[x][1] && allCharacteristics[x][0] != allCharacteristics[x][2] && allCharacteristics[x][1] != allCharacteristics[x][2]) {
             result++
         }
     }
-    if(result == 4) {
+    if (result == 4) {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
 
 //counting the number of matches in chosen cards
-set.countMatchesInChosenCards = function() {
+set.countMatchesInChosenCards = function () {
     set.numberOfMatchesInChosenCards = 0;
-    for(let x = 0; x < (set.numberOfCards - 2); x++){
-        for(let y = (x + 1); y < (set.numberOfCards - 1); y++) {
-            for(let z = (y + 1); z < set.numberOfCards; z++) {
+    for (let x = 0; x < (set.numberOfCards - 2); x++) {
+        for (let y = (x + 1); y < (set.numberOfCards - 1); y++) {
+            for (let z = (y + 1); z < set.numberOfCards; z++) {
                 var selected = [this.chosenCards[x], this.chosenCards[y], this.chosenCards[z]];
-                if(this.compareCards(selected)){
+                if (this.compareCards(selected)) {
                     set.numberOfMatchesInChosenCards++;
                 }
             }
@@ -94,6 +94,11 @@ set.countMatchesInChosenCards = function() {
     }
     return set.numberOfMatchesInChosenCards;
 }
+
+//initializing the game
+set.createCards();
+set.chooseCards();
+set.countMatchesInChosenCards();
 
 //REACT
 class App extends React.Component {
@@ -113,10 +118,11 @@ class Board extends React.Component {
         super(props);
     }
     render() {
+        debugger;
         var array = [
             ["blue", "striped", "circle", 2],
             ["green", "solid", "square", 3],
-            
+
         ]
 
         return (
@@ -134,7 +140,7 @@ class Board extends React.Component {
                 <Card cardColor={array[0][0]} cardTexture={array[0][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
                 <Card cardColor={array[0][0]} cardTexture={array[0][1]} cardShape={array[0][2]} cardNumber={array[0][3]}></Card>
 
-                
+
             </div>
         )
     }
