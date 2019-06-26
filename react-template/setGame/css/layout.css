@@ -36,8 +36,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
 /* GENERAL */
@@ -93,7 +92,7 @@ button:hover {
 
 .cardsWrapper {
     display: flex;
-    height: 100%;
+    height: calc(100% - 80px);
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -168,17 +167,26 @@ button:hover {
     .footer {
         display: flex;
     }
+    .cardsWrapper {
+        height: calc(100% - 80px);
+    }
 }
 
 @media screen and (orientation: landscape) {
     .footer {
         display: none;
     }
+    .cardsWrapper {
+        height: calc(100% - 40px);
+    }
 }
 
 @media screen and (min-height: 600px) and (orientation: landscape) {
     .footer {
         display: flex;
+    }
+    .cardsWrapper {
+        height: calc(100% - 80px);
     }
 }
 

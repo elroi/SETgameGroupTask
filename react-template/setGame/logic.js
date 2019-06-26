@@ -15,13 +15,19 @@ class App extends React.Component {
                         <button>Reset</button>
                     </div>
                 </div>
-                <Board/>
-                <div className="footer">/ Team 3 /</div>
+                <Board />
+                <Footer />
             </div>
         )
     }
 }
-
+class Footer extends React.Component {
+    render() {
+        return (
+            <div className="footer">/ Team 3 /</div>
+        )
+    }
+}
 class Board extends React.Component {
     constructor(props) {
         super(props);
