@@ -5,7 +5,7 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="app">
                 <div className="header">
                     <div className="information">
                         <div><b>Available Sets: </b><span>00</span></div>
@@ -15,8 +15,8 @@ class App extends React.Component {
                         <button>Reset</button>
                     </div>
                 </div>
-                <Board className="cardsWrapper" />
-                <div class="footer">/ Team 3 /</div>
+                <Board/>
+                <div className="footer">/ Team 3 /</div>
             </div>
         )
     }
@@ -67,10 +67,11 @@ class Board extends React.Component {
             cards.push(<Card handleChange={this.validateChange} cardColor={array[i][0]} cardTexture={array[i][1]} cardShape={array[i][2]} cardNumber={array[i][3]}></Card>)
         }
         return (
-            <div className="grid">
-                {cards}
+            <div className="cardsWrapper">
+                <div className="grid">
+                    {cards}
+                </div>
             </div>
-
         )
     }
 }
@@ -99,6 +100,7 @@ class Card extends React.Component {
             numShapes.push(<div className={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape} key={numShapes[i]} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}></div>);
         }
         return (
+
             <div className={"card " + clicked} onClick={this.selectCard} data-cardInfo={this.props.cardColor + " " + this.props.cardTexture + " " + this.props.cardShape + " " + this.props.cardNumber}>
                 {numShapes}
             </div>
