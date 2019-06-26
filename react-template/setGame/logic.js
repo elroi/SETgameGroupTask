@@ -1,3 +1,4 @@
+//LOGIC (JAVASCRIPT)
 var set = {};
 set.numberOfCards = 12;
 set.color = ["red", "blue", "green"];
@@ -20,6 +21,29 @@ set.createCards = function () {
         }
     }
 }
+
+//choosing "numberOfCards" from all possible options while making sure they all are different
+set.chooseCards = function () {
+    var indexes = [];
+    for (let i = 0; i < set.numberOfCards; i++) {
+        var index = this.getRandomCard();
+        while (indexes.includes(index)) {
+            var index = this.getRandomCard();
+        }
+        indexes.push(index);
+    }
+    for (let m = 0; m < indexes.length; m++) {
+        set.chosenCards[m] = set.cards[indexes[m]];
+    }
+}
+
+//getting a random number according to "numberOfCards"
+set.getRandomCard = function () {
+    return Math.floor(Math.random() * this.cards.length);
+}
+
+
+//REACT
 class App extends React.Component {
     constructor(props){
         super(props);
