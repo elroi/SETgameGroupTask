@@ -79,6 +79,21 @@ set.compareCards = function (selectedCards) {
     }
 }
 
+//counting the number of matches in chosen cards
+set.countMatchesInChosenCards = function() {
+    set.numberOfMatchesInChosenCards = 0;
+    for(let x = 0; x < (set.numberOfCards - 2); x++){
+        for(let y = (x + 1); y < (set.numberOfCards - 1); y++) {
+            for(let z = (y + 1); z < set.numberOfCards; z++) {
+                var selected = [this.chosenCards[x], this.chosenCards[y], this.chosenCards[z]];
+                if(this.compareCards(selected)){
+                    set.numberOfMatchesInChosenCards++;
+                }
+            }
+        }
+    }
+    return set.numberOfMatchesInChosenCards;
+}
 
 //REACT
 class App extends React.Component {
