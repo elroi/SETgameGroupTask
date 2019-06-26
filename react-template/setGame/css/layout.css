@@ -129,10 +129,29 @@ button:hover {
 
 .card:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 25px 5px rgb(204, 204, 204);
+    box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
 }
 
 .selected {
-    box-shadow: 0px 0px 25px 5px rgb(204, 204, 204);
-    box-shadow: 0px 0px 25px 5px rgba(255, 206, 84, 1);
+    box-shadow: 0px 0px 15px 3px rgba(255, 206, 84, 1);
+}
+
+@media screen and (orientation: portrait) {
+    .card {
+        flex-direction: column;
+        padding: 35px 0px;
+    }
+    .leaf, .rectangle, .pill {
+        width: 60%;
+        height: 25%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .header {
+        height: 30px;
+    }
+    .footer {
+        display: none;
+    }
 }
