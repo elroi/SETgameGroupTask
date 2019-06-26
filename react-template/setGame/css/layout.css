@@ -16,6 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: lightskyblue;
 }
 
 #root {
@@ -40,6 +41,43 @@ body {
 }
 
 /* HEADER AND FOOTER */
+
+.header {
+    height: 40px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end
+}
+
+button {
+    background-color: transparent;
+    color: salmon;
+    min-width: 40px;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    text-decoration: none;
+    border: 2px dashed lightsalmon;
+}
+
+button:hover {
+    text-decoration: none;
+    color: lightblue;
+    border: 2px solid lightsalmon;
+    background-color: rgba(255, 160, 122, .5);
+    cursor: pointer;
+}
+
+.footer {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* -----------CARDS----------- */
 
