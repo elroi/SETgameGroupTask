@@ -44,3 +44,8 @@
     justify-items: center;
     overflow-x: hidden;
 }*/
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
