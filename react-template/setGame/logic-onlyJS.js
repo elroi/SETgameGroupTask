@@ -1,10 +1,10 @@
 //JS ONLY
-var set = {};
+window.set = {};
 set.numberOfCards = 12;
 set.color = ["red", "blue", "green"];
-set.pattern = ["full", "empty", "striped"];
-set.shape = ["circle", "square", "triangle"];
-set.number = ["one", "two", "three"];
+set.pattern = ["nofill", "filled", "stripped"];
+set.shape = ["pill", "rectangle", "leave"];
+set.number = [1, 2, 3];
 set.cards = [];
 set.chosenCards = [];
 

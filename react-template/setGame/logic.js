@@ -16,7 +16,6 @@ class Board extends React.Component {
         super(props);
     }
     render() {
-        debugger;
         var array = [
             ["blue", "striped", "circle", 2],
             ["green", "solid", "square", 3],
